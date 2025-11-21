@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,25 +43,34 @@ All colors MUST be HSL.
     --input: 240 8% 12%;
     --ring: 280 85% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
     /* Status Colors */
     --verified: 142 76% 36%;
     --on-hold: 38 92% 50%;
     --sold: 240 5% 40%;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(280 85% 65%), hsl(220 80% 60%));
     --gradient-card: linear-gradient(180deg, hsl(240 8% 10%), hsl(240 8% 6%));
     --gradient-hero: linear-gradient(135deg, hsl(280 85% 65% / 0.15), hsl(220 80% 60% / 0.1));
-    
+
     /* Shadows */
     --shadow-card: 0 8px 32px -8px hsl(280 85% 65% / 0.2);
     --shadow-glow: 0 0 40px hsl(280 85% 65% / 0.3);
     --shadow-premium: 0 20px 60px -15px hsl(280 85% 65% / 0.4);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-serif: "Source Serif Pro", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  }
+  .dark {
+    --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --radius: 1rem;
+    --font-serif: "Source Serif Pro", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 }
 
