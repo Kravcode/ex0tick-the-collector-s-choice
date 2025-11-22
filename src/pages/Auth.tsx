@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Logo } from "@/components/Logo";
+import Logo from "@/components/Logo";
 import { useToast } from "@/hooks/use-toast";
 
 const Auth = () => {
@@ -81,7 +81,7 @@ const Auth = () => {
       <Card className="w-full max-w-md shadow-premium border-primary/20">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <Logo className="text-3xl" />
+            <Logo />
           </div>
           <CardTitle>Welcome to Ex0tick</CardTitle>
           <CardDescription>Sign in or create an account to start trading collectibles</CardDescription>
