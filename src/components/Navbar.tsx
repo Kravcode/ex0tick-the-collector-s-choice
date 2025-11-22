@@ -1,27 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import { Button } from "./ui/button";
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { User } from "@supabase/supabase-js";
 import { LogOut, ShoppingBag, Store, User as UserIcon } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 export const Navbar = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    supabase.auth.onAuthStateChange((event, session) => {
-      setUser(session?.user ?? null);
-    });
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-    });
-  }, []);
-
   const handleSignOut = async () => {
-    await supabase.auth.signOut();
+    await signOut();
     navigate("/");
   };
 
