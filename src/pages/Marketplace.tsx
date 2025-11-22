@@ -88,11 +88,15 @@ const Marketplace = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
+                <SelectItem value="sneakers">Sneakers</SelectItem>
                 <SelectItem value="drinks">Drinks</SelectItem>
                 <SelectItem value="hot_wheels">Hot Wheels</SelectItem>
+                <SelectItem value="streetwear">Streetwear</SelectItem>
+                <SelectItem value="watches">Watches</SelectItem>
+                <SelectItem value="electronics">Electronics</SelectItem>
+                <SelectItem value="trading_cards">Trading Cards</SelectItem>
+                <SelectItem value="toys">Toys</SelectItem>
                 <SelectItem value="snacks">Snacks</SelectItem>
-                <SelectItem value="merch">Merch</SelectItem>
-                <SelectItem value="collectibles">Collectibles</SelectItem>
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>

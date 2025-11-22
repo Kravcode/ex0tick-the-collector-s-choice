@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Logo } from "./Logo";
+import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";

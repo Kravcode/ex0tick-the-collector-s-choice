@@ -1,16 +1,21 @@
+import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 
-interface LogoProps {
-  className?: string;
-  showIcon?: boolean;
-}
-
-export const Logo = ({ className = "", showIcon = true }: LogoProps) => {
+const Logo = () => {
   return (
-    <div className={`flex items-center gap-1 font-bold text-2xl ${className}`}>
-      <span className="bg-gradient-primary bg-clip-text text-transparent">Ex</span>
-      {showIcon && <Check className="w-6 h-6 text-primary" strokeWidth={3} />}
-      <span className="bg-gradient-primary bg-clip-text text-transparent">tick</span>
-    </div>
+    <Link to="/" className="flex items-center gap-1 group">
+      <span className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent tracking-tight">
+        Ex0
+      </span>
+      <div className="relative">
+        <Check className="w-7 h-7 text-primary animate-pulse" strokeWidth={3} />
+        <Check className="w-7 h-7 text-neon-cyan absolute top-0 left-0 opacity-50 blur-sm" strokeWidth={3} />
+      </div>
+      <span className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent tracking-tight">
+        ick
+      </span>
+    </Link>
   );
 };
+
+export default Logo;
